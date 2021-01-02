@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+  int a[8]={33,44,-34,-43,55,66,-56,-65};
+  int i; //定义数据比较的轮数
+  int j; //定义数据比较的次数
+  int buf;
+  for(i=0;i<7;i++)
+   {
+    for(j=0;j<(7-i);j++)
+    {
+      if(a[j]>a[j+1])
+      {
+        buf=a[j];
+        a[j]=a[j+1];
+        a[j+1]=buf;
+      }
+    }
+   }
+   printf("排序后的结果:\n");
+   for(i=0;i<7;i++)
+   {
+     printf("%d",a[i]);
+   }
+    printf("\n");
+    return 0;
+}
