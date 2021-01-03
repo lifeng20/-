@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#define NEE 500
+int main()
+{
+	char *con(char*,char*);
+  char s1[LEN],s2[LEN],*p1,*p2,*p;
+  p1=s1;
+  p2=s2;
+  printf("Please enter two strings:\n");
+  gets(p1);
+  gets(p2);
+  p=con(p1,p2);
+  printf("The new string is:\n");
+  puts(p);
+  return 0;
+}
+char *con(char *p1,char *p2)
+{
+	char *p;
+	char a[3]=" ";
+  p=p1;
+  strcat(p,a);
+  strcat(p,p2);
+	return p;
+}
