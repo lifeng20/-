@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+  int a[10]={0,1,2,3,4,5,6,7,8,9};
+  int b,i,c;
+  c=a[9];
+  for(i=8;i>=0;i++)
+    a[i+1]=a[i];
+    a[0]=c;
+   printf("输出以为后的数组:\n");
+   for(i=0;i<10;i++)
+    printf("%d",a[i]);
+    printf("\n");
+   return 0;
+}
